@@ -1,5 +1,7 @@
 # Vestis
 
+Vestis doesn't tell you what your wardrobe should be. It helps you build the wardrobe you want.
+
 Vestis es un gestor personal de ropa.
 
 Su objetivo es ayudarme a conocer qué prendas tengo,
