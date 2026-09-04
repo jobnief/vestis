@@ -1,5 +1,8 @@
+from vestis.models.wardrobe import Wardrobe
 from vestis.models.garment import Garment
 from vestis.enums.category import Category
+
+guardarropa = Wardrobe ()
 
 nombre = input("¿Cómo se llama tu prenda? ")
 opcion = int(input("¿Tu prenda a que categoria pertenece? \n 1-Remera \n 2-Pantalón \n 3-Campera \n 4-Boxer \n 5-Medias\n"  ) )
@@ -16,7 +19,8 @@ elif opcion == 5:
     categoria = Category.MEDIAS
 else:
     print("No es una opción es valida")
-
+    #instruccion para cerrar el programa
+    exit()
 colores = input("Agrega de que color/es esta compuesta la prenda (separa cada color con una coma: ,) ")
 colores=colores.split(",")
 
@@ -31,4 +35,5 @@ prenda = Garment(
     category=categoria,
     colors=colores_limpios
 )
-print(prenda)
+guardarropa.add_garment(prenda)
+guardarropa.list_garments()
